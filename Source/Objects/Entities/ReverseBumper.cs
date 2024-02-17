@@ -1,6 +1,4 @@
-
-using System;
-using Celeste;
+using Celeste.Mod.Entities;
 using Microsoft.Xna.Framework;
 using MonoMod.Utils;
 
@@ -14,7 +12,10 @@ namespace Celeste.Mod.stupid_modded_objects.Objects.Entities
             var orig = pc.OnCollide;
             pc.OnCollide = player => {
                 orig(player);
-                player.Speed *= -1;
+                if(Collidable)
+                {
+                    player.Speed *= -1;
+                }
             };
             // other stuff
         }
