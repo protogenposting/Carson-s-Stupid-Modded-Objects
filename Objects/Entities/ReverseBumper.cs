@@ -11,14 +11,14 @@ namespace Celeste.Mod.Carson_s_Stupid_Modded_Objects.Objects.Entities
         private readonly DynamicData BaseData;
         public ReverseBumper(EntityData data, Vector2 offset) : base(data, offset)
         {
-                BaseData = DynamicData.For(this);
-                PlayerCollider pc = Get<PlayerCollider>();
-                var orig = pc.OnCollide;
-                pc.OnCollide = player => {
-                    orig(player);
-                    player.Speed *= -1;
-                };
-                // other stuff
+            BaseData = DynamicData.For(this);
+            PlayerCollider pc = Get<PlayerCollider>();
+            var orig = pc.OnCollide;
+            pc.OnCollide = player => {
+                orig(player);
+                player.Speed *= -1;
+            };
+            // other stuff
         }
     }
 }
