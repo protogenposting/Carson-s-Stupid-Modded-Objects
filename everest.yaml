@@ -1,6 +1,7 @@
-- Name: stupidmoddedobjects
+- DLL: bin/stupid_modded_objects.dll
+  Name: stupidmoddedobjects
   Version: 0.1.0
-  DLL: bin/stupid_modded_objects.dll
   Dependencies:
+    - Name: Everest
     - Name: EverestCore
       Version: 1.4465.0

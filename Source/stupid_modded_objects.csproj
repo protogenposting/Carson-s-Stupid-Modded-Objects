@@ -22,9 +22,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Reference Include="$(CelestePrefix)\Celeste.dll">
-            <Private>false</Private>
-        </Reference>
+        <PackageReference Include="CelesteMod.Publicizer" Version="1.0.0" CelesteAssembly="$(CelestePrefix)\Celeste.dll" />
         <Reference Include="$(CelestePrefix)\MMHOOK_Celeste.dll">
             <Private>false</Private>
         </Reference>
