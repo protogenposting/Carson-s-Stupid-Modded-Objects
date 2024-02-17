@@ -4,9 +4,9 @@ using Celeste;
 using Microsoft.Xna.Framework;
 using MonoMod.Utils;
 
-namespace Celeste.Mod.Carson_s_Stupid_Modded_Objects.Objects.Entities
+namespace Celeste.Mod.stupid_modded_objects.Objects.Entities
 {
-    [CustomEntity("Carson_s_Stupid_Modded_Objects/ReverseBumper")]
+    [CustomEntity("stupid_modded_objects/ReverseBumper")]
     public class ReverseBumper : Bumper{
         public ReverseBumper(EntityData data, Vector2 offset) : base(data, offset)
         {

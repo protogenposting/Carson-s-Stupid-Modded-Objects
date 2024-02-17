@@ -1,6 +1,6 @@
-- Name: Carson's stupid modded objects
+- Name: stupidmoddedobjects
   Version: 0.1.0
-  DLL: bin/Carson_s_Stupid_Modded_Objects.dll
+  DLL: bin/stupid_modded_objects.dll
   Dependencies:
     - Name: EverestCore
       Version: 1.4465.0
