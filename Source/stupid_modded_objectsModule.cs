@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.Xna.Framework;
+using MonoMod.ModInterop;
 
 namespace Celeste.Mod.stupid_modded_objects {
     public class stupid_modded_objectsModule : EverestModule {
@@ -24,9 +25,14 @@ namespace Celeste.Mod.stupid_modded_objects {
             Logger.SetLogLevel(nameof(stupid_modded_objectsModule), LogLevel.Info);
 #endif
         }
+        [ModImportName("ExtendedVariantMode")]
+        public static class ExtendedVariantImports {
+            public static Action<string, float, bool> TriggerFloatVariant;
+        }
 
         public override void Load() {
             // TODO: apply any hooks that should always be active
+            typeof(ExtendedVariantImports).ModInterop();
         }
 
         public override void Unload() {
