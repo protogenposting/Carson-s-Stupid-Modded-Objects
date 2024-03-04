@@ -18,7 +18,7 @@ namespace Celeste.Mod.stupid_modded_objects.Objects.Entities
                 {
                     stupid_modded_objectsModule.ExtendedVariantImports.TriggerFloatVariant("GameSpeed",0.5f,true);
                     stupid_modded_objectsModule.ExtendedVariantImports.TriggerFloatVariant("SpeedX",2f,true);
-                    Alarm.Set(player, 5, () => {
+                    Alarm.Set(player, 1, () => {
                         stupid_modded_objectsModule.ExtendedVariantImports.TriggerFloatVariant("GameSpeed",1f,true);
                         stupid_modded_objectsModule.ExtendedVariantImports.TriggerFloatVariant("SpeedX",1f,true);
                     });
