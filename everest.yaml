@@ -2,6 +2,7 @@
   Name: stupidmoddedobjects
   Version: 0.1.0
   Dependencies:
+    - Name: Everest
     - Name: EverestCore
       Version: 1.4465.0
     - Name: ExtendedVariantMode
