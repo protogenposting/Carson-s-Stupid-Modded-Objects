@@ -15,20 +15,17 @@ namespace Celeste.Mod.stupid_modded_objects.Objects.Entities
         private FieldInfo bodySprInfo = typeof(IntroCar).GetField("bodySprite", BindingFlags.GetField | BindingFlags.NonPublic | BindingFlags.Instance);
         public CoffeeCar(EntityData data, Vector2 offset) : base(data.Position)
         {
-            PlayerCollider pc = Get<PlayerCollider>();
-            var orig = pc.OnCollide;
-            pc.OnCollide = player => {
-                if(Collidable&&(player.Dashes<player.MaxDashes||player.Stamina<=20))
-                {
-                    player.Speed.Y=-27;
-                }
-                orig(player);
-            };
+            
         }
-        public override void Update()
+        /*public override void Update()
         {
+            Player player = GetPlayerOnTop();
+            if(player!=null)
+            {
+                player.Speed.Y = -16;
+            }
             base.Update();
-        }
+        }*/
         private void UpdateVisualState()
         {
             Image bodySpr = bodySprInfo.GetValue(this) as Image;
