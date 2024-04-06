@@ -9,7 +9,7 @@ namespace Celeste.Mod.stupid_modded_objects.Objects.Entities
 {
     [CustomEntity("stupid_modded_objects/CoffeeRefill")]
     public class CoffeeRefill : Refill{
-        public CoffeeRefill(EntityData data, Vector2 offset) : base(data.Position,false,false)
+        public CoffeeRefill(EntityData data, Vector2 offset) : base(data.Position + offset,false,false)
         {
             PlayerCollider pc = Get<PlayerCollider>();
             var orig = pc.OnCollide;
