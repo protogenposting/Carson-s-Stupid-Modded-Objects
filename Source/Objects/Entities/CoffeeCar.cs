@@ -15,25 +15,25 @@ namespace Celeste.Mod.stupid_modded_objects.Objects.Entities
         private FieldInfo bodySprInfo = typeof(IntroCar).GetField("bodySprite", BindingFlags.GetField | BindingFlags.NonPublic | BindingFlags.Instance);
         public CoffeeCar(EntityData data, Vector2 offset) : base(data.Position + offset)
         {
-            
+            Position.Y+=16;
         }
         public override void Update()
         {
             Player player = GetPlayerRider();
             if(player!=null)
             {
-                player.Speed.Y = -16;
+                if(!player.DashAttacking)
+                {
+                    player.Speed.Y = -300;
+                }
             }
+            UpdateVisualState();
             base.Update();
         }
         private void UpdateVisualState()
         {
             Image bodySpr = bodySprInfo.GetValue(this) as Image;
             bodySpr.Color=Calc.HexToColor("5F3300");
-        }
-        public void SetActivatedSilently(bool activated)
-        {
-            UpdateVisualState();
         }
     }
 }
